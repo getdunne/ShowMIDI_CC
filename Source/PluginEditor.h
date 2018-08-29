@@ -10,7 +10,7 @@ public:
     CCListBoxModel(ListBox& lb) : ListBoxModel(), listBox(lb) {}
     virtual ~CCListBoxModel();
 
-    int getNumRows() { return sliders.size(); }
+    int getNumRows() override { return sliders.size(); }
     void backgroundClicked(const MouseEvent&) override;
 
     void paintListBoxItem(int, Graphics &, int, int, bool) override;
